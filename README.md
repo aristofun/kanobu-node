@@ -27,7 +27,19 @@
 - add nocache helper
 
 - ready to deploy - gitignore!
--  
+- `heroku create kanobu-node`  
+- git push heroku master
+- heroku open
+- Homework - more states
+
+PROFIT!!
+
+PS:
+
+https://handlebarsjs.com/
+https://expressjs.com/en/4x/api.html
+https://expressjs.com/en/resources/frameworks.html
+
    
     
   
