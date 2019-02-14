@@ -34,27 +34,24 @@ function getGameStatus(choice1, choice2) {
 // Обработчик HTTP GET запроса в корне сайта
 app.get('/', (request, response) => {
   // Возможные варианты для выбора игроком
-  let choices = ['rock', 'paper', 'scissors'];
+  const choices = ['rock', 'paper', 'scissors'];
 
   // Варианты исхода игры
-  let statuses = ['Ничья', 'Вы победили :)', 'Нода победила :('];
+  const statuses = ['Ничья', 'Вы победили :)', 'Нода победила :('];
 
   // Переменные для статуса игры, выбора игрока и выбора ноды
-  let gameStatus;
-  let userChoice = request.query.choice;
+  let gameStatus, userChoice;
   let compChoice = choices[Math.floor(Math.random() * choices.length)];
 
   // Если от юзера пришел корректный выбор - разыгрываем комбинацию и сохраняем исход игры
-  if (choices.includes(userChoice)) {
-    gameStatus = `${statuses[getGameStatus(userChoice, compChoice)]}`
-  } else {
-    // Если выбор некорректный зануляем, чтобы в шаблон не передать левые данные
-    userChoice = null;
+  if (choices.includes(request.query.choice)) {
+    gameStatus = statuses[getGameStatus(userChoice, compChoice)]
+    userChoice = request.query.choice
   }
 
   // Рендерим index.hbs шаблон с рассчитанными параметрами
   response.render('index', {
-    choice: {user: userChoice, node: compChoice},
+    choice: {userChoice, compChoice},
     gameStatus
   });
 });

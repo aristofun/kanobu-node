@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>{{ gameStatus }} — КаНоБу на Ноде</title>
+  <meta charset="utf-8">
+  <title>{{ gameStatus }} — КаНоБу на Ноде</title>
 </head>
 <body>
 <div class="container">
-    {{#if gameStatus}}
-        <h1>{{ gameStatus }}</h1>
-        <!-- result pictures -->
-        <img src="/img/{{choice.user}}.jpg" alt="Ваш выбор"/>
-        <strong>vs</strong>
-        <img src="/img/{{choice.node}}.jpg" alt="Выбор Ноды"/>
-        <hr/>
-    {{/if}}
+  {{#if gameStatus}}
+    <h1>{{ gameStatus }}</h1>
+    <!-- result pictures -->
+    <img src="/img/{{choice.userChoice}}.jpg" alt="Ваш выбор"/>
+    <strong>vs</strong>
+    <img src="/img/{{choice.compChoice}}.jpg" alt="Выбор Ноды"/>
+    <hr/>
+  {{/if}}
 
-    <h2>Новая игра: </h2>
+  <h2>Новая игра: </h2>
+  <p>
+    <a href="/?choice=rock&rnd={{ noCache }}">Камень</a>
+    <a href="/?choice=scissors&rnd={{ noCache }}">Ножницы</a>
+    <a href="/?choice=paper&rnd={{ noCache }}">Бумага</a>
+  </p>
+
+  <footer>
     <p>
-        <a href="/?choice=rock&rnd={{ noCache }}">Камень</a>
-        <a href="/?choice=scissors&rnd={{ noCache }}">Ножницы</a>
-        <a href="/?choice=paper&rnd={{ noCache }}">Бумага</a>
+      <small>&copy; KarinaTiurina, Хороший программист</small>
     </p>
-
-    <footer>
-        <p>
-            <small>&copy; KarinaTiurina, Хороший программист</small>
-        </p>
-    </footer>
+  </footer>
 </div>
 </body>
 </html>
