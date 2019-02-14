@@ -30,7 +30,7 @@
 - `heroku create kanobu-node`  
 - git push heroku master
 - heroku open
-- Homework - more states
+- Homework - more states (https://github.com/KarinaTiurina/rock_paper_scissors/tree/master/app/assets/images)
 
 PROFIT!!
 
