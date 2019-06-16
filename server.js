@@ -11,7 +11,7 @@ let app = express();
 
 // Helper method for views
 app.locals.getImages = (choice) => {
-  let userChoice = choice.userChoice, compChoice = choice.compChoice;
+  let { userChoice, compChoice } = choice;
   const status = getGameStatus(userChoice, compChoice);
 
   switch (status) {

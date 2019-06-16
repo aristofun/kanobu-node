@@ -34,12 +34,11 @@ write server.js
     function getGameStatus
     let vars and logic
   
-  5/ add nocache helper
-  response.set('Cache-Control', 'public, max-age=86400'); // 1 day
-  add helper method
+  5/ add helper method
+  all pictures the same
+  add helper method with choice object
   
-
-6/
+7/
 ready to deploy - gitignore!
 `heroku create kanobu-node`  
 git push heroku master
