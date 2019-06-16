@@ -1,16 +1,20 @@
 {
-  "name": "kanobu-node",
+  "name": "kanobu-node-web",
   "version": "1.0.0",
   "description": "Ka No Bu game",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js -e js,ejs"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "hbs": "^4.0.1"
+    "ejs": "^2.6.2",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
