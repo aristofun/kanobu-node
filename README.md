@@ -13,26 +13,33 @@ npm i express
 npm i ejs
 
 write server.js 
-  app + listen + "start": "node server.js"
+  1/
+  app + listen + "start": "node server.js" + app.get('/')
+  cl(request.query)
+  
+  2/
   static + images (show browser)
-  app.get('/' -> render shit
+  add public/img/ pictures
   
-make views/index.ejs
-add public/img/ pictures
+  npm i nodemon -D
+  "dev": "nodemon server.js -e js,ejs"
 
-add template
-  index.ejs full except nocache
+  3/ views
+  make views/index.ejs
+  locals.gameStatus VS locals['gameStatus']
   
-finish server.js
-  function getGameStatus
-  let vars and logic
+  4/ dynamic views
+  EJS conditions
+  finish server.js
+    function getGameStatus
+    let vars and logic
+  
+  5/ add nocache helper
+  response.set('Cache-Control', 'public, max-age=86400'); // 1 day
+  add helper method
+  
 
-check locally
-npm i nodemon -D
-"dev": "nodemon server.js -e js,ejs"
-
-add nocache helper
-
+6/
 ready to deploy - gitignore!
 `heroku create kanobu-node`  
 git push heroku master

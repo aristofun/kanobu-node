@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title><%= locals['gameStatus'] %> — nodejs Rock, Scissors, Paper</title>
+</head>
+<body>
+<div class="container">
+    <% if (locals['gameStatus']) { %>
+        <h1><%- locals.gameStatus %></h1>
+        <!-- result pictures -->
+        <img src="/img/<%- getImages(locals.choice).userChoice -%>.jpg" alt="Your choice"/>
+        <!--        <img src="/img/<%- locals.choice.userChoice -%>.jpg" alt="Your choice"/>-->
+        <strong>vs</strong>
+        <img src="/img/<%- getImages(locals.choice).compChoice -%>.jpg" alt="Nodejs choice"/>
+        <!--        <img src="/img/<%- locals.choice.compChoice -%>.jpg" alt="Nodejs choice"/>-->
+        <hr/>
+    <% } %>
+        
+    <h2>Let's rock: </h2>
+    <p>
+        <a href="/?choice=rock">Rock</a>
+        <a href="/?choice=scissors">Scissors</a>
+        <a href="/?choice=paper">Paper</a>
+    </p>
+
+    <footer>
+        <hr/>
+        <p>
+            &copy; KarinaTiurina and Goodprogrammer.ru,
+            <a href="http://t-do.ru/jsrush">@jsrush</a>
+        </p>
+    </footer>
+</div>
+</body>
+</html>
